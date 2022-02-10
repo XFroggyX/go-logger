@@ -28,7 +28,7 @@ func Init(folder, fileLog string) *Logger {
 		panic(fmt.Sprintf("[Error]: %s", err))
 	}
 
-	l := lgr.New(lgr.Msec, lgr.Debug, lgr.CallerFile, lgr.CallerFunc, lgr.Out(projectLog),
+	l := lgr.New(lgr.Msec, lgr.Debug, lgr.CallerFile, lgr.CallerFunc, lgr.Format(lgr.ShortDebug), lgr.Out(projectLog),
 		lgr.Err(projectLog))
 
 	return &Logger{
