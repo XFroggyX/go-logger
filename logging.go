@@ -68,6 +68,6 @@ func Init(folder, fileLog string) {
 		Writer:    []io.Writer{projectLog, os.Stdout},
 		LogLevels: logrus.AllLevels,
 	})
-
 	log.SetLevel(logrus.TraceLevel)
+	e = logrus.NewEntry(log)
 }
